@@ -66,44 +66,40 @@ export default function Home() {
         </p>
 
         <h3 className="mt-8 text-center text-2xl ">
-          Be among the first to experience our{' '}
-          <span className="animate-text bg-gradient-to-r from-fuchsia-500 via-pink-500 to-orange-500 bg-clip-text font-bold text-transparent">
-            beta launch!
-          </span>{' '}
+          Secure your spot for our beta launch
           <br />
-          Enter your email below to{' '}
-          <span className="animate-text bg-gradient-to-r from-fuchsia-500 via-pink-500 to-orange-500 bg-clip-text font-bold text-transparent">
-            secure your spot.
-          </span>
+          <span className="text-6xl">👇</span>
         </h3>
-        <form className="relative mt-8 flex items-center justify-center">
-          <input
-            type="url"
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-            className={` block w-[350px] rounded-lg bg-[#000] p-4 text-xs font-bold text-white outline-none placeholder:text-[#eee] min-[425px]:w-[400px] sm:ml-4 sm:w-[600px] sm:text-lg`}
-            placeholder="Enter email here..."
-            required
-          />
-          <div className="absolute -bottom-16 right-0 ml-0 lg:relative lg:bottom-0 lg:ml-4">
+        <form className="relative mt-8 flex flex-col items-stretch  justify-center md:flex-row md:items-start">
+          <div>
+            <input
+              type="url"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              className={` block w-[350px] rounded-lg bg-[#000] p-4 text-xs font-bold text-white outline-none placeholder:text-[#eee] min-[425px]:w-[400px] sm:ml-4 sm:w-[600px] sm:text-lg`}
+              placeholder="Enter email here..."
+              required
+            />
+            <p className="ml-4 text-xs italic text-[#555]">
+              <span className="text-[#ff0000]">*</span>Your email is safe with
+              us. No spam, just updates.
+            </p>
+          </div>
+          <div className="mt-4 md:mt-0 md:ml-4">
             <button
               type="submit"
               onClick={async (e) => {
                 e.preventDefault();
                 await handleSaveEmail();
               }}
-              className=" min-w-[80px] animate-text  rounded-[50px] bg-white bg-gradient-to-r from-blue-500 via-purple-500 to-orange-500 px-8 py-2 text-lg font-bold text-white outline-none hover:saturate-150 sm:px-8 sm:py-4 sm:text-lg "
+              className="w-full animate-text  rounded-[50px] bg-white bg-gradient-to-r from-blue-500 via-purple-500 to-orange-500 px-8 py-2 text-lg font-bold text-white outline-none hover:saturate-150 sm:px-8 sm:py-4 sm:text-lg "
             >
               {isLoading ? <CustomSpinner /> : 'join waitlist'}
             </button>
           </div>
         </form>
-        <p className="mt-20 font-semibold italic text-[#555] sm:mt-24 lg:mt-4">
-          <span className="text-[#ff0000]">*</span>Your email is safe with us.
-          No spam, just updates.
-        </p>
 
         <div className="relative my-16 flex w-full justify-center">
           <svg fill="none" viewBox="0 0 959 638" className="w-[950px]">
