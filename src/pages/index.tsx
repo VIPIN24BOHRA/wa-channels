@@ -51,7 +51,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="mt-16 flex min-h-screen w-[100%] flex-col items-center overflow-hidden bg-white px-16">
+      <div className="mt-16 flex min-h-screen w-[100%] flex-col items-center overflow-hidden bg-white px-8 sm:px-16">
         <h1 className="text-center text-5xl font-extrabold">
           Transform your{' '}
           <span className="text-[#017cff]">
@@ -125,7 +125,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-32">
+        <div className="mt-32 w-full flex justify-center">
           <TextAnimation />
         </div>
 

@@ -24,7 +24,7 @@ export default function SocialMedia() {
       <p className="mb-4 inline-block rounded-lg bg-[rgba(1,124,255,.1)] px-4 py-2 text-sm">
         INTEGRATIONS
       </p>
-      <h1 className="text-4xl font-bold">
+      <h1 className="text-2xl sm:text-4xl font-bold">
         <span className="text-[#017cff]">Use</span> Whatsapp Channel with
       </h1>
       <div className="my-16 flex w-full items-center justify-evenly">

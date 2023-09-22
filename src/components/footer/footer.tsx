@@ -4,7 +4,7 @@
 export default function Footer() {
   return (
     <div className="h-[60px]">
-      <div className="flex h-full items-center justify-between rounded-lg  border-[#eee]  px-16">
+      <div className="flex h-full items-center justify-between rounded-lg  border-[#eee] px-8 md:px-16">
         <h1 className="text-sm font-bold  text-[#000]  ">Whatsapp Channels</h1>
 
         <div className="flex items-center">
