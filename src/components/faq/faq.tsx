@@ -16,8 +16,8 @@ const FAQ: React.FC = () => {
   const [selectedFaq, setSelectedFaq] = React.useState<number | null>(null);
 
   return (
-    <section className="relative mt-32 flex-col md:flex-row flex items-start px-8 pb-20 lg:px-32 ">
-      <div className="mt-4 md:mt-8 mb-8 md:mb-0 ml-8 md:ml-0 ">
+    <section className="relative mt-32 flex flex-col items-start px-8 pb-20 md:flex-row lg:px-32 ">
+      <div className="mt-4 mb-8 ml-8 md:mt-8 md:mb-0 md:ml-0 ">
         <p className="inline-block rounded-lg bg-[rgba(1,124,255,.1)] px-4 py-2 text-sm">
           FAQ
         </p>

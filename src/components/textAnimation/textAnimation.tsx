@@ -27,9 +27,7 @@ export default function TextAnimation() {
   const [text, setText] = useState(
     <motion.h1
       key={allText[0]}
-      className={
-        'font-extrabold  text-2xl sm:text-4xl md:text-6xl text-white'
-      }
+      className={'text-2xl  font-extrabold text-white sm:text-4xl md:text-6xl'}
       initial={{ opacity: 0 }}
       animate={{
         opacity: [0, 1, 0],
@@ -52,7 +50,7 @@ export default function TextAnimation() {
         <motion.h1
           key={val}
           className={
-            'flex items-center text-2xl sm:text-4xl md:text-6xl font-extrabold'
+            'flex items-center text-2xl font-extrabold sm:text-4xl md:text-6xl'
           }
           initial={{ opacity: 0 }}
           animate={{

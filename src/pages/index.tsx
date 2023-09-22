@@ -125,7 +125,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-32 w-full flex justify-center">
+        <div className="mt-32 flex w-full justify-center">
           <TextAnimation />
         </div>
 
