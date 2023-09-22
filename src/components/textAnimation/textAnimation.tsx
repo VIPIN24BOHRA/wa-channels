@@ -28,7 +28,7 @@ export default function TextAnimation() {
     <motion.h1
       key={allText[0]}
       className={
-        'text-6xl font-extrabold  text-2xl sm:text-4xl md:text-6xl text-white'
+        'font-extrabold  text-2xl sm:text-4xl md:text-6xl text-white'
       }
       initial={{ opacity: 0 }}
       animate={{
