@@ -9,7 +9,8 @@ import SocialMedia from '@/components/socialMedia/socialMedia';
 import TextAnimation from '@/components/textAnimation/textAnimation';
 
 import socialMediaImg from '../../public/assets/images/socialMediaBox.png';
-import waChannelImg from '../../public/assets/images/waChannel.png';
+// import waChannelImg from '../../public/assets/images/waChannel.png';
+import waChannelSsImg from '../../public/assets/images/waChannelSs.png';
 
 export default function Home() {
   const [email, setEmail] = useState('');
@@ -75,14 +76,14 @@ export default function Home() {
             secure your spot.
           </span>
         </h3>
-        <form className=" relative w-[400px] sm:w-[500px]">
+        <form className=" relative w-[350px] min-[425px]:w-[400px] sm:w-[500px]">
           <input
             type="url"
             value={email}
             onChange={(e) => {
               setEmail(e.target.value);
             }}
-            className={`mt-4  block w-full rounded-lg border-2 border-dotted border-[#000] p-2.5 text-xs font-bold text-sky-700 outline-none placeholder:text-gray-400 sm:ml-4 sm:text-lg`}
+            className={`mt-4 block w-full rounded-lg border-2 border-dotted border-[#000] p-2.5 text-xs font-bold text-sky-700 outline-none placeholder:text-gray-400 sm:ml-4 sm:text-lg`}
             placeholder="Enter email here..."
             required
           />
@@ -108,33 +109,34 @@ export default function Home() {
               stroke="#25D366"
             />
           </svg>
-          <div className="absolute bottom-0 left-40 flex items-center">
+          <div className="hover: absolute top-10 left-0 flex items-center sm:top-20 sm:left-10 md:top-40 md:left-20 lg:bottom-0 lg:left-40 xl:left-40">
             <Image
               src={socialMediaImg}
               alt="It's Fate"
               width={500}
               height={450}
               quality={100}
+              className="h-auto w-[200px] sm:w-[300px] md:w-[400px] min-[1400px]:w-[500px] "
             />
           </div>
-          <div className="absolute top-20 right-0 flex items-center">
+          <div className="absolute top-0 right-[20px] flex items-center md:right-[5%] lg:top-20 lg:right-[20%] xl:right-[35%]">
             <Image
-              src={waChannelImg}
+              src={waChannelSsImg}
               alt="It's Fate"
-              width={800}
-              height={600}
+              width={300}
+              height={400}
               quality={100}
-              className="rounded-lg shadow-max"
+              className="h-auto w-[150px] rounded-lg shadow-max sm:w-[220px] md:w-[280px] min-[1400px]:w-[300px] "
             />
           </div>
         </div>
 
         <div className="mt-16 w-full text-center text-2xl font-bold">
-          Connect With Followers Via your
+          Connect with followers via your
           <span className="inline-block w-[150px] px-4 text-center">
             <TextAnimation />
           </span>
-          WhatsApp Channel
+          WhatsApp channel
         </div>
 
         {showNotification && (
