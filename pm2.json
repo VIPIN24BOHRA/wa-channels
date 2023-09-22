@@ -1,0 +1,13 @@
+{
+  "name": "whatsapp-confessions-sentry",
+  "apps": [
+    {
+      "name": "whatsapp-confessions-sentry",
+      "script": "npm",
+      "args": "start"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "staging"
+  }
+}
