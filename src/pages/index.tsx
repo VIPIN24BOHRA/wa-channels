@@ -78,11 +78,11 @@ export default function Home() {
             onChange={(e) => {
               setEmail(e.target.value);
             }}
-            className={`sm:ml-4  mt-4 block w-full rounded-lg border-2 border-dotted border-headingColor bg-sky-100 p-2.5 text-xs font-bold text-sky-700 outline-none placeholder:text-sky-700 sm:text-lg`}
+            className={`mt-4  block w-full rounded-lg border-2 border-dotted border-headingColor bg-sky-100 p-2.5 text-xs font-bold text-sky-700 outline-none placeholder:text-sky-700 sm:ml-4 sm:text-lg`}
             placeholder="Enter email here..."
             required
           />
-          <div className="absolute right-2 sm:right-0 bottom-2 flex justify-end ">
+          <div className="absolute right-2 bottom-2 flex justify-end sm:right-0 ">
             <button
               type="submit"
               onClick={async (e) => {
