@@ -53,43 +53,47 @@ export default function Home() {
     <>
       <div className="mt-16 flex min-h-screen w-[100%] flex-col items-center overflow-hidden bg-white px-8 sm:px-16">
         <h1 className="text-center text-5xl font-extrabold">
-          Transform your{' '}
-          <span className="text-[#017cff]">
-            social media into WhatsApp
-            <br /> Channel ✨
-          </span>
-          updates with ease!
+          Transform your
+          <br />
+          <span className="text-[#25D366]">Socials into WhatsApp Channel </span>
+          <br /> with ease!
         </h1>
 
         <p className="mt-4 text-center font-[500] text-[#404040]">
-          Step up Your Social Media Game: Share Your Posts on the new WhatsApp
-          Channel
-          <br /> feature with Ease – Stay Connected, Share Content, and Engage!
+          Share your social media posts on the new WhatsApp channel feature
+          automatically- Limitless followers & engagement!
         </p>
 
-        <h3 className="mt-8 animate-text bg-gradient-to-r from-fuchsia-500 via-pink-500 to-orange-500 bg-clip-text text-center text-2xl font-bold text-transparent">
-          Be among the first to experience our beta launch! <br />
-          Enter your email below to secure your spot.
+        <h3 className="mt-8 text-center text-2xl ">
+          Be among the first to experience our{' '}
+          <span className="animate-text bg-gradient-to-r from-fuchsia-500 via-pink-500 to-orange-500 bg-clip-text font-bold text-transparent">
+            beta launch!
+          </span>{' '}
+          <br />
+          Enter your email below to{' '}
+          <span className="animate-text bg-gradient-to-r from-fuchsia-500 via-pink-500 to-orange-500 bg-clip-text font-bold text-transparent">
+            secure your spot.
+          </span>
         </h3>
-        <form className=" relative  w-[400px]">
+        <form className=" relative w-[400px] sm:w-[500px]">
           <input
             type="url"
             value={email}
             onChange={(e) => {
               setEmail(e.target.value);
             }}
-            className={`mt-4  block w-full rounded-lg border-2 border-dotted border-headingColor bg-sky-100 p-2.5 text-xs font-bold text-sky-700 outline-none placeholder:text-sky-700 sm:ml-4 sm:text-lg`}
+            className={`mt-4  block w-full rounded-lg border-2 border-dotted border-[#000] p-2.5 text-xs font-bold text-sky-700 outline-none placeholder:text-gray-400 sm:ml-4 sm:text-lg`}
             placeholder="Enter email here..."
             required
           />
-          <div className="absolute right-2 bottom-2 flex justify-end sm:right-0 ">
+          <div className="absolute right-2 bottom-1.5 flex justify-end sm:right-0 ">
             <button
               type="submit"
               onClick={async (e) => {
                 e.preventDefault();
                 await handleSaveEmail();
               }}
-              className="min-w-[80px] rounded-lg border-none bg-gradient-to-r from-blue-700 to-blue-300 px-4  py-1 text-xs font-medium text-white outline-none hover:saturate-150 sm:px-4 sm:py-1 sm:text-sm "
+              className="min-w-[80px] rounded-3xl border-none bg-[#000] px-8 py-1 text-xs font-bold text-white outline-none hover:saturate-150 sm:px-8 sm:py-2 sm:text-sm "
             >
               {isLoading ? <CustomSpinner /> : 'save'}
             </button>
@@ -125,8 +129,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-32 flex w-full justify-center">
-          <TextAnimation />
+        <div className="mt-16 w-full text-center text-2xl font-bold">
+          Connect With Followers Via your
+          <span className="inline-block w-[150px] px-4 text-center">
+            <TextAnimation />
+          </span>
+          WhatsApp Channel
         </div>
 
         {showNotification && (
