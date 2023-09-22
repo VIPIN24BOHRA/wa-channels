@@ -76,30 +76,34 @@ export default function Home() {
             secure your spot.
           </span>
         </h3>
-        <form className=" relative w-[350px] min-[425px]:w-[400px] sm:w-[500px]">
+        <form className="relative mt-8 flex items-center justify-center">
           <input
             type="url"
             value={email}
             onChange={(e) => {
               setEmail(e.target.value);
             }}
-            className={`mt-4 block w-full rounded-lg border-2 border-dotted border-[#000] p-2.5 text-xs font-bold text-sky-700 outline-none placeholder:text-gray-400 sm:ml-4 sm:text-lg`}
+            className={` block w-[350px] rounded-lg bg-[#000] p-4 text-xs font-bold text-white outline-none placeholder:text-[#eee] min-[425px]:w-[400px] sm:ml-4 sm:w-[600px] sm:text-lg`}
             placeholder="Enter email here..."
             required
           />
-          <div className="absolute right-2 bottom-1.5 flex justify-end sm:right-0 ">
+          <div className="absolute -bottom-16 right-0 ml-0 lg:relative lg:bottom-0 lg:ml-4">
             <button
               type="submit"
               onClick={async (e) => {
                 e.preventDefault();
                 await handleSaveEmail();
               }}
-              className="min-w-[80px] rounded-3xl border-none bg-[#000] px-8 py-1 text-xs font-bold text-white outline-none hover:saturate-150 sm:px-8 sm:py-2 sm:text-sm "
+              className=" min-w-[80px] animate-text  rounded-[50px] bg-white bg-gradient-to-r from-blue-500 via-purple-500 to-orange-500 px-8 py-2 text-lg font-bold text-white outline-none hover:saturate-150 sm:px-8 sm:py-4 sm:text-lg "
             >
-              {isLoading ? <CustomSpinner /> : 'save'}
+              {isLoading ? <CustomSpinner /> : 'join waitlist'}
             </button>
           </div>
         </form>
+        <p className="mt-20 font-semibold italic text-[#555] sm:mt-24 lg:mt-4">
+          <span className="text-[#ff0000]">*</span>Your email is safe with us.
+          No spam, just updates.
+        </p>
 
         <div className="relative my-16 flex w-full justify-center">
           <svg fill="none" viewBox="0 0 959 638" className="w-[950px]">
