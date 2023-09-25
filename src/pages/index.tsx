@@ -93,7 +93,7 @@ export default function Home() {
                 e.preventDefault();
                 await handleSaveEmail();
               }}
-              className="w-full animate-text  rounded-[50px] bg-white bg-gradient-to-r from-blue-500 via-purple-500 to-orange-500 px-8 py-2 text-lg font-bold text-white outline-none hover:saturate-150 sm:px-8 sm:py-4 sm:text-lg "
+              className="w-full animate-text md:w-[200px]  rounded-[50px] bg-white bg-gradient-to-r from-blue-500 via-purple-500 to-orange-500 px-8 py-2 text-lg font-bold text-white outline-none hover:saturate-150 sm:px-8 sm:py-4 sm:text-lg "
             >
               {isLoading ? <CustomSpinner /> : 'join waitlist'}
             </button>
