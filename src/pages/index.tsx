@@ -35,7 +35,7 @@ export default function Home() {
         setEmail('');
         setShowNotification({
           success: true,
-          info: 'Email succesfully added to waitlist!',
+          info: 'Success! Thanks for joining our waitlist',
         });
       } else {
         setShowNotification(response);
