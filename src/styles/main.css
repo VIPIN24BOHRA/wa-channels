@@ -84,9 +84,11 @@ video {
   /* border: 0; */
   font-size: 100%;
   font: inherit;
+
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -143,6 +145,9 @@ table {
   overflow: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 @media screen and (min-width: 1280px) {
   .appbarMT {
     margin-top: 70px;
