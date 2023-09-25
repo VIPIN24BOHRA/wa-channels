@@ -9,7 +9,6 @@ import SocialMedia from '@/components/socialMedia/socialMedia';
 import TextAnimation from '@/components/textAnimation/textAnimation';
 
 import socialMediaImg from '../../public/assets/images/socialMediaBox.png';
-// import waChannelImg from '../../public/assets/images/waChannel.png';
 import waChannelSsImg from '../../public/assets/images/waChannelSs.png';
 
 export default function Home() {
@@ -113,10 +112,10 @@ export default function Home() {
             <Image
               src={socialMediaImg}
               alt="It's Fate"
-              width={500}
-              height={450}
+              width={300}
+              height={200}
               quality={100}
-              className="h-auto w-[200px] sm:w-[300px] md:w-[400px] min-[1400px]:w-[500px] "
+              className="h-auto w-[140px] sm:w-[200px] md:w-[250px] min-[1400px]:w-[300px] rounded-lg shadow-lg"
             />
           </div>
           <div className="absolute top-0 right-[20px] flex items-center md:right-[5%] lg:top-20 lg:right-[20%] xl:right-[35%]">
