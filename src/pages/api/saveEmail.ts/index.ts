@@ -11,7 +11,7 @@ async function handlePostRequest(req: NextApiRequest, res: NextApiResponse) {
     if (!email || !email.match(emailRegEx)) {
       res.status(400).send({
         success: false,
-        info: 'Oops! Invalid email. Please login and try again.',
+        info: 'Oops! Invalid email. Please try again.',
       });
       return;
     }

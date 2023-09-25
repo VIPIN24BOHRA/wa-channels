@@ -35,7 +35,7 @@ export default function Home() {
         setEmail('');
         setShowNotification({
           success: true,
-          info: 'Email Succesfully Saved!',
+          info: 'Email succesfully added to waitlist!',
         });
       } else {
         setShowNotification(response);
@@ -64,7 +64,7 @@ export default function Home() {
           automatically- Limitless followers & engagement!
         </p>
 
-        <h3 className="mt-8 text-center text-2xl ">
+        <h3 id="joinWaitlist" className="mt-8 text-center text-2xl ">
           Secure your spot for our beta launch
           <br />
           <span className="text-6xl">👇</span>
@@ -142,8 +142,8 @@ export default function Home() {
           <div
             className={
               showNotification.success
-                ? `fixed top-32 right-6 z-10 rounded-lg bg-[#4cbb17] px-8 py-2 text-white `
-                : `fixed top-32 right-6 z-10 rounded-lg bg-[#ff0000] px-8 py-2 text-white `
+                ? `fixed top-24 right-0 sm:right-6 z-10 rounded-lg bg-[#4cbb17] px-8 py-2 text-2xl font-semibold text-white w-full sm:w-auto `
+                : `fixed top-24 right-0 sm:right-6 z-10 rounded-lg bg-[#ff0000] px-8 py-2 text-2xl font-semibold text-white w-full sm:w-auto `
             }
           >
             {showNotification.info}

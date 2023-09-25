@@ -5,12 +5,17 @@ export default function Header() {
         Whatsapp Channels
       </h1>
       <div className="grow"></div>
-      <button className="mr-2  text-base font-bold underline min-[475px]:text-lg sm:text-xl md:mr-8">
+      <button
+        className="mr-2  text-base text-gray-300 font-bold underline min-[475px]:text-lg sm:text-xl md:mr-8"
+        disabled
+      >
         Log in
       </button>
-      <button className="rounded-3xl bg-[#000] px-4 py-2 text-sm font-bold text-white sm:text-base md:px-8">
-        Try for free
-      </button>
+      <a href="#joinWaitlist">
+        <button className="rounded-3xl bg-[#000] px-4 py-2 text-sm font-bold text-white sm:text-base md:px-8">
+          join waitlist
+        </button>
+      </a>
     </div>
   );
 }
