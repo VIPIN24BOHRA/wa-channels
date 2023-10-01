@@ -21,6 +21,7 @@ export default function Home() {
 
   const handleSaveEmail = async () => {
     setLoading(true);
+
     try {
       const res = await fetch('/api/saveEmail', {
         method: 'POST',
@@ -32,11 +33,14 @@ export default function Home() {
       const response = await res.json();
 
       if (response.success) {
-        setEmail('');
         setShowNotification({
           success: true,
           info: 'Success! Thanks for joining our waitlist',
         });
+        (window as any).twq('event', 'tw-ogp7m-ogp7r', {
+          email_address: email, // Pass the user's email address
+        });
+        setEmail('');
       } else {
         setShowNotification(response);
       }
