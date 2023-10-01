@@ -65,7 +65,7 @@ export default function Home() {
 
         <p className="mt-4 text-center font-[500] text-[#404040]">
           Share your social media posts on the new WhatsApp channel feature
-          automatically- Limitless followers & engagement!
+          automatically.
         </p>
 
         <h3 id="joinWaitlist" className="mt-8 text-center text-2xl ">

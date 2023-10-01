@@ -13,7 +13,7 @@ const faqData = [
   },
   {
     question: 'I have more questions!',
-    answer: `Feel free to email us at hello@plugapp.net`,
+    answer: `Feel free to email us at hello@mixchannels.com`,
   },
 ];
 
