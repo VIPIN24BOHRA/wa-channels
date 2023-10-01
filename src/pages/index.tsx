@@ -97,7 +97,7 @@ export default function Home() {
                 e.preventDefault();
                 await handleSaveEmail();
               }}
-              className="w-full animate-text md:w-[200px]  rounded-[50px] bg-white bg-gradient-to-r from-blue-500 via-purple-500 to-orange-500 px-8 py-2 text-lg font-bold text-white outline-none hover:saturate-150 sm:px-8 sm:py-4 sm:text-lg "
+              className="w-full animate-text rounded-[50px]  bg-white bg-gradient-to-r from-blue-500 via-purple-500 to-orange-500 px-8 py-2 text-lg font-bold text-white outline-none hover:saturate-150 sm:px-8 sm:py-4 sm:text-lg md:w-[200px] "
             >
               {isLoading ? <CustomSpinner /> : 'join waitlist'}
             </button>
@@ -119,7 +119,7 @@ export default function Home() {
               width={300}
               height={200}
               quality={100}
-              className="h-auto w-[140px] sm:w-[200px] md:w-[250px] min-[1400px]:w-[300px] rounded-lg shadow-lg"
+              className="h-auto w-[140px] rounded-lg shadow-lg sm:w-[200px] md:w-[250px] min-[1400px]:w-[300px]"
             />
           </div>
           <div className="absolute top-0 right-[20px] flex items-center md:right-[5%] lg:top-20 lg:right-[20%] xl:right-[35%]">
@@ -146,8 +146,8 @@ export default function Home() {
           <div
             className={
               showNotification.success
-                ? `fixed top-24 right-0 sm:right-6 z-10 rounded-lg bg-[#4cbb17] px-8 py-2 text-2xl font-semibold text-white w-full sm:w-auto `
-                : `fixed top-24 right-0 sm:right-6 z-10 rounded-lg bg-[#ff0000] px-8 py-2 text-2xl font-semibold text-white w-full sm:w-auto `
+                ? `fixed top-24 right-0 z-10 w-full rounded-lg bg-[#4cbb17] px-8 py-2 text-2xl font-semibold text-white sm:right-6 sm:w-auto `
+                : `fixed top-24 right-0 z-10 w-full rounded-lg bg-[#ff0000] px-8 py-2 text-2xl font-semibold text-white sm:right-6 sm:w-auto `
             }
           >
             {showNotification.info}

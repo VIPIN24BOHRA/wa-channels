@@ -6,7 +6,7 @@ export default function Header() {
       </h1>
       <div className="grow"></div>
       <button
-        className="mr-2  text-base text-gray-300 font-bold underline min-[475px]:text-lg sm:text-xl md:mr-8"
+        className="mr-2  text-base font-bold text-gray-300 underline min-[475px]:text-lg sm:text-xl md:mr-8"
         disabled
       >
         Log in
