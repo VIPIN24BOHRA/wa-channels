@@ -27,7 +27,15 @@ class MyDocument extends Document {
             }}
           />
           <script async src="/twitterScript.js" />
-
+          <script async src="/facebookScript.js" />
+          <noscript>
+            <img
+              height="1"
+              width="1"
+              style={{ display: 'none' }}
+              src="https://www.facebook.com/tr?id=642928041160522&ev=PageView&noscript=1"
+            />
+          </noscript>
           <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Outfit:wght@200;300;400;500;600;700;800&family=Pacifico&family=Red+Hat+Display:ital,wght@0,700;0,900;1,500&family=Rubik+Distressed&family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Satisfy&display=swap"
             rel="stylesheet"
