@@ -9,7 +9,7 @@ export const queueCreateChannel = async (channelDetails: QueuedChannel) => {
   const eventsRef = db.ref(`app/createChannelQueue/`);
   try {
     const ref = eventsRef.push(removeNullKeys(channelDetails));
-    console.log('channel queued', ref.key);
+    console.log('channel queued', ref.key, removeNullKeys(channelDetails));
   } catch (error) {
     console.log(error, 'Error while created channel queued');
   }

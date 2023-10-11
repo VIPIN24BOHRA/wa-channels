@@ -42,6 +42,7 @@ async function handlePostRequest(req: NextApiRequest, res: NextApiResponse) {
       uid: user.user_id,
       status: 'queued',
     };
+    console.log(channelDescription);
 
     await queueCreateChannel(channelDetails);
     // return response from here;
