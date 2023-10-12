@@ -15,7 +15,7 @@ export default function App() {
         <MainMenu />
         <div className="flex">
           <div className="w-[220px]"></div>
-          <div className="grow">
+          <div className="w-[83%]">
             <DashboardPage />
           </div>
         </div>

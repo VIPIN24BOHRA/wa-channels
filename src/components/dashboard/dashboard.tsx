@@ -2,17 +2,17 @@
 
 import { useState } from 'react';
 
+import AllChannelWrapper from '../allChannelWrapper/allChannelWrapper';
 import { CardWithForm } from '../createChannel/createChannel';
 import { Button } from '../ui/button';
 
 export default function DashboardPage() {
   const [createChannelModel, showCreateChannelModal] = useState(false);
   return (
-    <div className="mx-4 mt-8">
+    <div className=" mx-4 my-12">
       <h3 className="text-xl font-bold ">Home</h3>
-
-      <div className="mt-4 h-[600px] w-full rounded-md border-[2px] border-[#eee] shadow-lg">
-        <nav className="border-b-[2px] border-[#eee] p-4">
+      <div className="relative mt-8 w-full rounded-md border-[2px] border-[#eee] shadow-lg">
+        <nav className="absolute top-0 z-10 w-full border-b-[2px] border-[#eee] bg-[#fff5] px-8 py-4 backdrop-blur-[8px]">
           <ul className="flex items-center">
             <div className="grow ">
               <li className="font-bold">All Channel</li>
@@ -26,12 +26,7 @@ export default function DashboardPage() {
             </Button>
           </ul>
         </nav>
-        <section className="flex h-full items-center justify-center ">
-          <div>
-            You don't have any whatsapp channel, click on create channel and
-            start auto posting to your channel{' '}
-          </div>
-        </section>
+        <AllChannelWrapper />
       </div>
       {createChannelModel && (
         <CardWithForm showCreateChannelModal={showCreateChannelModal} />
