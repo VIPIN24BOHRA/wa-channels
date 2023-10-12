@@ -7,11 +7,15 @@ import FirebaseClient from '@/lib/modules/firebaseClient';
 import { digest } from '@/utils/helper';
 
 import { ChannelCard } from '../channelCard/channelCard';
+import ChannelWrapper from '../channelWrapper/channelWrapper';
 import { Skeleton } from '../ui/skeleton';
 
 export default function AllChannelWrapper() {
   const [allChannels, setAllChannels] = useState<QueuedChannel[]>([]);
   const [loading, setLoading] = useState(true);
+  const [selectedChannel, setSelectedChannel] = useState<QueuedChannel | null>(
+    null
+  );
   useEffect(() => {
     const uid = FirebaseClient.auth().currentUser?.uid;
     if (!uid) return;
@@ -37,6 +41,13 @@ export default function AllChannelWrapper() {
         .off();
     };
   }, []);
+  if (selectedChannel)
+    return (
+      <ChannelWrapper
+        channelDetails={selectedChannel}
+        setSelectedChannel={setSelectedChannel}
+      />
+    );
   if (loading)
     return (
       <section className="flex h-[500px] w-full flex-wrap items-start overflow-auto px-8 pt-24 ">
@@ -57,6 +68,7 @@ export default function AllChannelWrapper() {
             <ChannelCard
               key={`${digest(c.channelName + c.channelDescription)}`}
               channelDetails={c}
+              setSelectedChannel={setSelectedChannel}
             />
           );
         })}

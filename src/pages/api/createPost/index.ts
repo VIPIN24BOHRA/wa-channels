@@ -1,13 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import type { QueuedChannel } from '@/lib/modules/firebase.types';
-import { queueCreateChannel } from '@/lib/modules/firebase/channelsQueue';
+import type { Post } from '@/lib/modules/firebase.types';
+import { createNewPost } from '@/lib/modules/firebase/postDb';
 import { fetchUserFromToken } from '@/utils/authHelper';
-import { digest } from '@/utils/helper';
 
 async function handlePostRequest(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const { channelName, channelDescription, token } = req.body;
+    const { postMessage, channelId, token } = req.body;
 
     if (!token) {
       res.status(401).send({
@@ -17,7 +16,7 @@ async function handlePostRequest(req: NextApiRequest, res: NextApiResponse) {
       return;
     }
 
-    if (!channelName || !channelDescription) {
+    if (!postMessage || !channelId) {
       res.status(400).send({
         success: false,
         info: 'Oops! missing channel details. Please try again.',
@@ -34,20 +33,16 @@ async function handlePostRequest(req: NextApiRequest, res: NextApiResponse) {
       });
       return;
     }
-
-    const channelId = digest(channelName + channelDescription + Date.now(), 8);
-    const channelDetails: QueuedChannel = {
-      channelName,
-      channelDescription,
+    const newPost: Post = {
+      postMessage,
+      uid: user.user_id,
+      channelId,
       createdat: Date.now(),
       updatedat: 0,
-      uid: user.user_id,
       status: 'queued',
-      channelId,
     };
-    console.log(channelDescription);
+    await createNewPost(newPost);
 
-    await queueCreateChannel(channelDetails);
     // return response from here;
     res.status(200).send({ success: true });
   } catch (error) {

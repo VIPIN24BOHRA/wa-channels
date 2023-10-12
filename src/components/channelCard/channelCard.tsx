@@ -1,3 +1,5 @@
+import type { Dispatch, SetStateAction } from 'react';
+
 import {
   Card,
   CardContent,
@@ -9,18 +11,27 @@ import type { QueuedChannel } from '@/lib/modules/firebase.types';
 
 export function ChannelCard({
   channelDetails,
+  setSelectedChannel,
 }: {
   channelDetails: QueuedChannel;
+  setSelectedChannel: Dispatch<SetStateAction<QueuedChannel | null>>;
 }) {
   return (
-    <Card className="relative mr-8 mb-4 max-h-[250px] w-[330px] overflow-hidden shadow-md ">
-      <CardHeader>
+    <Card
+      className="relative mr-8 mb-4 h-[300px] max-h-[300px] w-[330px] cursor-pointer overflow-hidden shadow-md"
+      onClick={() => {
+        setSelectedChannel(channelDetails);
+      }}
+    >
+      <CardHeader className="mt-2">
         <CardTitle>{channelDetails.channelName}</CardTitle>
         <CardDescription>
           Created at : {new Date(channelDetails.createdat).toDateString()}
         </CardDescription>
       </CardHeader>
-      <CardContent>{channelDetails.channelDescription}</CardContent>
+      <CardContent className="text-sm">
+        {channelDetails.channelDescription}
+      </CardContent>
       {channelDetails.status !== 'created' && (
         <p className="absolute top-2 right-2 flex items-center">
           <span className="relative mr-2 flex h-3 w-3">

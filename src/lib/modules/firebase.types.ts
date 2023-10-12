@@ -5,4 +5,14 @@ export interface QueuedChannel {
   createdat: number;
   updatedat: number;
   status: 'queued' | 'created' | 'failed';
+  channelId: string;
+}
+
+export interface Post {
+  postMessage: string;
+  channelId: string;
+  uid: string;
+  status: 'queued' | 'created' | 'failed';
+  createdat: number;
+  updatedat: number;
 }
