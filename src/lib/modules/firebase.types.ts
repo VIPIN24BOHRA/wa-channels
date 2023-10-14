@@ -11,6 +11,7 @@ export interface QueuedChannel {
 export interface Post {
   postMessage: string;
   channelId: string;
+  channelName: string;
   uid: string;
   status: 'queued' | 'created' | 'failed';
   createdat: number;

@@ -118,6 +118,7 @@ export default function ChannelWrapper({
         <CreatePost
           showCreatePost={showCreatePost}
           channelId={channelDetails.channelId}
+          channelName={channelDetails.channelName}
         />
       )}
     </section>

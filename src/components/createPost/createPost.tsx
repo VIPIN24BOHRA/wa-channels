@@ -19,9 +19,11 @@ import { Textarea } from '../ui/textarea';
 export function CreatePost({
   showCreatePost,
   channelId,
+  channelName,
 }: {
   showCreatePost: Dispatch<SetStateAction<boolean>>;
   channelId: string;
+  channelName: string;
 }) {
   const [postMessage, setPostMessage] = useState('');
   const { toast } = useToast();
@@ -30,7 +32,7 @@ export function CreatePost({
     const token = await FirebaseClient.auth().currentUser?.getIdToken();
     if (!token) return;
 
-    const data = { channelId, postMessage, token };
+    const data = { channelId, postMessage, token, channelName };
 
     try {
       const res = await fetch('/api/createPost/', {

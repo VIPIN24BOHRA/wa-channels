@@ -6,7 +6,7 @@ import { fetchUserFromToken } from '@/utils/authHelper';
 
 async function handlePostRequest(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const { postMessage, channelId, token } = req.body;
+    const { postMessage, channelId, token, channelName } = req.body;
 
     if (!token) {
       res.status(401).send({
@@ -16,7 +16,7 @@ async function handlePostRequest(req: NextApiRequest, res: NextApiResponse) {
       return;
     }
 
-    if (!postMessage || !channelId) {
+    if (!channelName || !postMessage || !channelId) {
       res.status(400).send({
         success: false,
         info: 'Oops! missing channel details. Please try again.',
@@ -34,6 +34,7 @@ async function handlePostRequest(req: NextApiRequest, res: NextApiResponse) {
       return;
     }
     const newPost: Post = {
+      channelName,
       postMessage,
       uid: user.user_id,
       channelId,
