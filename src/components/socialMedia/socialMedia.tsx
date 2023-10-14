@@ -34,8 +34,8 @@ export default function SocialMedia() {
               key={`socialMedia${idx}`}
               className={
                 idx === currentImage
-                  ? 'flex h-[110px] w-[110px] items-center justify-center rounded-3xl shadow-maxBlue'
-                  : 'flex h-[110px] w-[110px] items-center justify-center rounded-3xl shadow-max hover:shadow-maxBlue'
+                  ? 'shadow-maxBlue flex h-[110px] w-[110px] items-center justify-center rounded-3xl'
+                  : 'shadow-max hover:shadow-maxBlue flex h-[110px] w-[110px] items-center justify-center rounded-3xl'
               }
             >
               <Image

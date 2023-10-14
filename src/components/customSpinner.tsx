@@ -3,7 +3,7 @@ export default function CustomSpinner() {
     <span>
       <svg
         aria-hidden="true"
-        className="inline h-5 w-5 animate-spin fill-headingColor text-gray-200 dark:text-gray-300"
+        className="fill-headingColor inline h-5 w-5 animate-spin text-gray-200 dark:text-gray-300"
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
